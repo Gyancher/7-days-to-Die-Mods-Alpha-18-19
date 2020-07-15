@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="LootableStoreShelving" />
+		<Description value="Activated that way to loot StoreShelving." />
+		<Author value="TheReaperME3" />
+		<Version value="1.6" />
+		<Website value="" />
+	</ModInfo>
+</xml>

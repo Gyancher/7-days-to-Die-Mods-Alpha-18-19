@@ -1,0 +1,289 @@
+<configs>
+<append xpath="/quests">
+
+	<quest_list id="Chess_quests">
+		<quest id="quest_PlayingChess"/>
+		<quest id="quest_CraftTheWhitePawns"/>
+		<quest id="quest_CraftTheBlackPawns"/>
+		<quest id="quest_CraftTheWhiteKnights"/>
+		<quest id="quest_CraftTheBlackKnights"/>
+		<quest id="quest_CraftTheWhiteBishops"/>
+		<quest id="quest_CraftTheBlackBishops"/>
+		<quest id="quest_CraftTheWhiteRooks"/>
+		<quest id="quest_CraftTheBlackRooks"/>
+		<quest id="quest_CraftTheWhiteQueen"/>
+		<quest id="quest_CraftTheBlackQueen"/>
+		<quest id="quest_CraftTheWhiteKing"/>
+		<quest id="quest_CraftTheBlackKing"/>		
+	</quest_list>
+	
+		<quest id="quest_PlayingChess" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_PlayingChessDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIf your bored you can always play a game of chess with your friends, but in order to do so you will need to make the chess pieces first. \nIf you make all the chess pieces, then you will receive an extra bonus..." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheWhitePawns" value="1"/>
+	</quest>	
+	
+	<quest id="quest_CraftTheWhitePawns" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheWhitePawnsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 8 white pawns" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess WPawn"/>
+			<property name="count" value="8"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheBlackPawns" value="1"/>
+	</quest>	
+	
+	<quest id="quest_CraftTheBlackPawns" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheBlackPawnsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 8 black pawns" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess BPawn"/>
+			<property name="count" value="8"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheWhiteKnights" value="1"/>
+	</quest>
+	
+	<quest id="quest_CraftTheWhiteKnights" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheWhiteKnightsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 2 white knights" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess WKnight"/>
+			<property name="count" value="2"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheBlackKnights" value="1"/>
+	</quest>
+	
+	<quest id="quest_CraftTheBlackKnights" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheBlackKnightsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 2 black knights" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess WKnight"/>
+			<property name="count" value="2"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheWhiteBishops" value="1"/>
+	</quest>
+	
+	<quest id="quest_CraftTheWhiteBishops" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheWhiteBishopsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 2 white bishops" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess WBishop"/>
+			<property name="count" value="2"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheBlackBishops" value="1"/>
+	</quest>
+	
+	<quest id="quest_CraftTheBlackBishops" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheBlackBishopsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 2 black bishops" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess BBishop"/>
+			<property name="count" value="2"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheWhiteRooks" value="1"/>
+	</quest>
+	
+	<quest id="quest_CraftTheWhiteRooks" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheWhiteRookpsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 2 white Rooks" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess WRook"/>
+			<property name="count" value="2"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheBlackRooks" value="1"/>
+	</quest>
+	
+		<quest id="quest_CraftTheBlackRooks" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheBlackRookpsDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the 2 black Rooks" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess BRook"/>
+			<property name="count" value="2"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheWhiteQueen" value="1"/>
+	</quest>
+	
+		<quest id="quest_CraftTheWhiteQueen" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheWhiteQueenDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the white Queen" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess WQueen"/>
+			<property name="count" value="1"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheBlackQueen" value="1"/>
+	</quest>
+	
+		<quest id="quest_CraftTheBlackQueen" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheBlackQueenDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the black Queen" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess BQueen"/>
+			<property name="count" value="1"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheWhiteKing" value="1"/>
+	</quest>
+	
+		<quest id="quest_CraftTheWhiteKing" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheWhiteKingDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the white King" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess WKing"/>
+			<property name="count" value="1"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="quest_CraftTheBlackKing" value="1"/>
+	</quest>
+	
+	<quest id="quest_CraftTheBlackKing" group_name_key="Chess_quests">
+		<property name="name_key" value="Chess - Intro" />
+		<property name="description_key" value="quest_CraftTheBlackKingDesc" />
+		<property name="icon" value="ui_game_symbol_perk"/>
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="Dear Friend,\nIn order to play chess we will need to craft the black King" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="true"/>		
+		
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="Chess BKing"/>
+			<property name="count" value="1"/>
+		</objective>
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+		<reward type="Exp" value="50"/>
+		<reward type="Item" id="CheckersR" value="10"/>
+		<reward type="Item" id="CheckersRKing" value="2"/>
+		<reward type="Item" id="CheckersB" value="10"/>
+		<reward type="Item" id="CheckersBKing" value="2"/>
+	</quest>
+</append>
+</configs>

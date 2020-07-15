@@ -1,0 +1,8 @@
+<configs>
+	
+	<!-- christmas version -->
+	<setattribute xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']" name="value">startSuitcase,meleeToolTorch,starterPackBook,christmasPack,+New</setattribute>
+    <setattribute xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']" name="value">startSuitcase,meleeToolTorch,starterPackBook,christmasPack,+New</setattribute>
+    <setattribute xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']" name="value">startSuitcase,meleeToolTorch,starterPackBook,christmasPack,+New</setattribute>
+
+</configs>

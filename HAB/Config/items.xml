@@ -1,0 +1,41 @@
+<configs>
+	<append xpath="/items">
+
+		<item name="vehicleHABchassis">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="CustomIcon" value="HABchassis"/>
+			<property name="DescriptionKey" value="vehicleHABchassisDesc"/>
+			<property name="EconomicValue" value="150"/>
+		</item>
+		
+		<item name="vehicleHABaccessories">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="CustomIcon" value="HABaccessories"/>
+			<property name="DescriptionKey" value="vehicleHABaccessoriesDesc"/>
+			<property name="EconomicValue" value="150"/>
+		</item>
+		
+		<item name="vehicleHABburner">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="CustomIcon" value="HABburner"/>
+			<property name="DescriptionKey" value="vehicleHABburnerDesc"/>
+			<property name="EconomicValue" value="150"/>
+		</item>
+		
+		<item name="vehicleHABplaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="CustomIcon" value="HAB"/>
+			<property name="DescriptionKey" value="vehicleHABplaceableDesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/HAB.unity3d?HAB.prefab"/>
+			<property name="EconomicValue" value="10000"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleHAB"/>
+				<property name="VehicleSize" value="4.7, 4.8, 5"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+			</effect_group>
+		</item>
+				
+	 </append>
+ </configs>

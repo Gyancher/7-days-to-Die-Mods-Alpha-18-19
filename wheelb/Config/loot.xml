@@ -1,0 +1,13 @@
+<lootcontainers>
+<append xpath="/lootcontainers">	
+<lootcontainer id="309" count="36" size="6,6" destroy_on_close="false" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" open_time="1" loot_quality_template="qualBaseTemplate">
+		<item name="resourceRockSmall" count="40,120"/>
+	<item name="resourceClayLump" count="40,120"/>
+	<item name="resourceCrushedSand" count="40,120"/>
+	<item name="resourceOilShale" count="20,120"/>
+	<item name="resourceCement" count="40,120"/>
+	<item name="resourceConcreteMix" count="20,80"/>
+	<item name="resourceCobblestones" count="40,120"/>
+</lootcontainer>
+</append>
+</lootcontainers>

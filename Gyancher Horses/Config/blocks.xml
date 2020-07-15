@@ -1,0 +1,86 @@
+
+<configs>
+    <append xpath="/blocks">
+	
+	<block name="Horse">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/horseblack.unity3d?HorseBlack"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="Horse Scraps" count="20,40" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceLeather" count="5,10" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceBone" count="1,5" tag="cropHarvest"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="CustomIcon" value="missingImageFile" />
+		</block>
+
+		<block name="HorseA">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/horseA.unity3d?horseA_v2"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="Horse Scraps" count="20,40" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceLeather" count="5,10" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceBone" count="1,5" tag="cropHarvest"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="CustomIcon" value="horseA" />
+		</block>	
+
+		<block name="HorseB">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/horseB.unity3d?horseB"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="Horse Scraps" count="20,40" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceLeather" count="5,10" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceBone" count="1,5" tag="cropHarvest"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="CustomIcon" value="horseB" />
+		</block>	
+
+		<block name="HorseC">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/horseC.unity3d?horseC"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="Horse Scraps" count="20,40" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceLeather" count="5,10" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceBone" count="1,5" tag="cropHarvest"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="CustomIcon" value="horseC" />
+		</block>	
+
+		<block name="HorseD">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/horseD.unity3d?horseD"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="Horse Scraps" count="20,40" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceLeather" count="5,10" tag="cropHarvest"/>
+            <drop event="Harvest" name="resourceBone" count="1,5" tag="cropHarvest"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="CustomIcon" value="horseD" />
+		</block>			
+		
+		</append>
+</configs>

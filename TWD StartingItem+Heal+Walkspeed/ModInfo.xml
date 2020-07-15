@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="StartingItemPlus" />
+		<Description value="Increase starting item and can get the whole volume of one kind of book. (Mainly for multiplayer). Plus Healing and Walkspeed" />
+		<Author value="DCM" />
+		<Version value="A18.4" />
+		<Website value="" />
+	</ModInfo>
+</xml>

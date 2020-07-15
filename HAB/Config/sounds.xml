@@ -1,0 +1,23 @@
+<configs>
+	<append xpath="/Sounds">
+
+		<SoundDataNode name="HAB_start"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/HABsounds.unity3d?balloon_start"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+		<SoundDataNode name="HAB_stop"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/HABsounds.unity3d?balloon_stop"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+		<SoundDataNode name="HAB_flying"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<AudioClip ClipName="#@modfolder:Resources/HABsounds.unity3d?balloon_flying" Loop="true"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+			
+		<SoundDataNode name="HAB_flying2"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<AudioClip ClipName="#@modfolder:Resources/HABsounds.unity3d?balloon_flying" Loop="true"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+	</append>
+</configs>

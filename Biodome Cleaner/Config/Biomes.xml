@@ -1,0 +1,20 @@
+<configs>
+
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='treeDeadPineLeaf']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='scrapMetalPile']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks01']" />
+	<remove xpath="//poi[contains(@name, '')]/decal" />
+
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks03']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='mineHubcap']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='desert']/decorations/decoration[@blockname='driftwood']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='desert']/decorations/decoration[@blockname='driftwood2']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='cinderBlocks01']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='cinderBlocks02']" />
+	<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='cinderBlocks03']" />
+
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather/ParticleEffect[@prefab='ParticleEffects/p_snowstorm1']/@ChunkMargin">120</set>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather/ParticleEffect[@prefab='ParticleEffects/p_sandstorm']/@ChunkMargin">120</set>
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather/ParticleEffect[@prefab='ParticleEffects/p_smokestorm']/@ChunkMargin">120</set>
+
+</configs>

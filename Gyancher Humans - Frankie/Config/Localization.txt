@@ -1,0 +1,9 @@
+Key,Source,Context,UsedInMainMenu,NoTranslate,English
+"start",,,,,"Are you the undead?"
+"statement_-1684104497",,,,,"Maybe not but a bar of soap wouldn't kill ya none either."
+"responseID_1595140464",,,,,"No I'm not dead yet."
+"response_-24413466",,,,,"Gee thanks."
+"responseID_-307220871",,,,,"Be safe friend."
+quest_FindFrankie,items,Quest - Note,,,Farmers Quest Note
+npcTraderFrankie,entityclasses,Entity,,,Trader Farmer
+FarmerFrankie,entityclasses,Entity,,,Lost Farmer

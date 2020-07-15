@@ -1,0 +1,13 @@
+<configs>
+
+	<remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
+    <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/display_value[@name='dDysenteryRisk']" />
+    <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@buff='buffDysenteryCatch']" />
+	<remove xpath="/items/item[starts-with(@name,'food') and not(contains(@name, 'Moldy')) and not(contains(@name, 'Raw')) and not(contains(@name, 'Crop')) and not(@name='foodEgg')]/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
+    <remove xpath="/items/item[starts-with(@name,'food') and not(contains(@name, 'Moldy')) and not(contains(@name, 'Raw')) and not(contains(@name, 'Crop')) and not(@name='foodEgg')]/effect_group//display_value[@name='dFoodPoisoningRisk']" />
+    <remove xpath="/items/item[starts-with(@name,'food') and not(contains(@name, 'Moldy')) and not(contains(@name, 'Raw')) and not(contains(@name, 'Crop')) and not(@name='foodEgg')]/effect_group/triggered_effect[@buff='buffIllFoodPoisoning01']" />
+	<remove xpath="/items/item[@name='foodCropGraceCorn']/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
+    <remove xpath="/items/item[@name='foodCropGraceCorn']/effect_group/display_value[@name='dFoodPoisoningRisk']" />
+    <remove xpath="/items/item[@name='foodCropGraceCorn']/effect_group/triggered_effect[@buff='buffIllFoodPoisoning01']" />	
+
+</configs>

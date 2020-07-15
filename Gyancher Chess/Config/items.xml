@@ -1,0 +1,148 @@
+<configs>
+	<append xpath="/items">
+	
+		
+		<item name="quest_PlayingChess">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_PlayingChessDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_PlayingChess"/>
+			</property>
+		</item>
+		
+			<item name="quest_CraftTheWhitePawns">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheWhitePawnsDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheWhitePawns"/>
+			</property>
+		</item>
+
+	<item name="quest_CraftTheBlackPawns">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheBlackPawnsDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheBlackPawns"/>
+			</property>
+		</item>
+		
+		<item name="quest_CraftTheWhiteKnights">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheWhiteKnightsDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheWhiteKnights"/>
+			</property>
+		</item>
+		
+		<item name="quest_CraftTheBlackKnights">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheBlackKnightsDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheBlackKnights"/>
+			</property>
+		</item>
+		
+		<item name="quest_CraftTheWhiteBishops">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheWhiteBishopsDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheWhiteBishops"/>
+			</property>
+		</item>
+
+		<item name="quest_CraftTheBlackBishops">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheBlackBishopsDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheBlackBishops"/>
+			</property>
+		</item>
+		
+		<item name="quest_CraftTheWhiteRooks">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheWhiteRooksDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheWhiteRooks"/>
+			</property>
+		</item>
+		
+			<item name="quest_CraftTheBlackRooks">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheBlackRooksDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheBlackRooks"/>
+			</property>
+		</item>
+		
+			<item name="quest_CraftTheWhiteQueen">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheWhiteQueenDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheWhiteQueen"/>
+			</property>
+		</item>
+		
+			<item name="quest_CraftTheBlackeQueen">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheBlackQueenDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheBlackeQueen"/>
+			</property>
+		</item>
+		
+			<item name="quest_CraftTheWhiteKing">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheWhiteKingDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheWhiteKing"/>
+			</property>
+		</item>
+		
+			<item name="quest_CraftTheBlackeKing">
+			<property name="Extends" value="questMaster" />
+			<property name="CustomIcon" value="ChessPieces"/>
+			<property name="DescriptionKey" value="quest_CraftTheBlackKingDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="QuestGiven" value="quest_CraftTheBlackeKing"/>
+			</property>
+		</item>
+	</append>
+</configs>

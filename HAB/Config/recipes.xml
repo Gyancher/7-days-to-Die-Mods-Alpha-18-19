@@ -1,0 +1,33 @@
+<configs>
+	<append xpath="/recipes">
+
+		<!-- basket -->
+		<recipe name="vehicleHABchassis" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceSpring" count="12"/>
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>			
+			<ingredient name="resourceHeadlight" count="1"/>
+		</recipe>
+
+		<!-- balloon -->
+		<recipe name="vehicleHABaccessories" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceCloth" count="1000"/>
+			<ingredient name="resourceDuctTape" count="50"/>
+		</recipe>
+		
+		<!-- burner -->
+		<recipe name="vehicleHABburner" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceMetalPipe" count="4"/>
+		</recipe>
+
+		<!-- placeable -->
+		<recipe name="vehicleHABplaceable" count="1" craft_area="workbench" craft_time="60" tags="workbenchCrafting">
+			<ingredient name="vehicleHABaccessories" count="1"/>
+			<ingredient name="vehicleHABchassis" count="1"/>
+			<ingredient name="vehicleHABburner" count="4"/>
+		</recipe>
+
+	</append>
+ </configs>

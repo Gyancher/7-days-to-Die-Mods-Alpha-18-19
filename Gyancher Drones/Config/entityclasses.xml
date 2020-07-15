@@ -1,0 +1,421 @@
+<configs>
+	<append xpath="/entity_classes">
+    
+	<entity_class name="Drone" extends="animalTemplateTimid">
+			<property name="Tags" value="entity,animal"/>
+						
+			<property name="MapIcon" value="ui_game_symbol_enemy_dot" /> 
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_animal_tracker"/> 
+			
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="Prefab" value="NPC"/>
+
+			<property name="Class" value="EntityAnimalRabbit"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Weight" value="100"/>
+			
+			<property name="HasRagdoll" value="false"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+					
+			<property name="Mass" value="40"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone.prefab"/>
+			
+			<property name="MaxTurnSpeed" value="180"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedPanic" value="0.55"/>      
+			<property name="MoveSpeedAggro" value=".5, 1.25"/> 
+			<property name="JumpMaxDistance" value="16, 17"/> 
+			
+			<property name="HandItem" value="handDrone"/>
+			
+			<property name="Immunity" value="sickness;disease;wellness"/>
+			
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="1"/>
+			<property name="AIPathCostScale" value=".4, .6"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>  
+			
+				<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotRandom" />
+			<property name="SoundAttack" value="RobotRandom" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotRandom" /> 
+			
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="130"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value=".5"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+			
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="CanClimbLadders" value="true"/>
+			
+			<property name="ExperienceGain" value="2"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="480"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			
+			<drop event="Harvest" name="resourceScrapIron" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="5"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2"/>
+			<drop event="Harvest" name="resourceCloth" tag="salvageHarvest" count="12"/>
+			<property name="LootListAlive" value="130"/> 
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="SurfaceCategory" value="metal"/>  
+			<property name="Faction" value="whiteriver"/>	  
+		</entity_class>	
+			
+			
+			
+	<entity_class name="MedicalDrone" extends="animalTemplateTimid">
+			<property name="Tags" value="entity,animal"/>
+						
+			<property name="MapIcon" value="ui_game_symbol_enemy_dot" /> 
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_animal_tracker"/> 
+			
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="Prefab" value="NPC"/>
+
+			<property name="Class" value="EntityAnimalRabbit"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Weight" value="100"/>
+			
+			<property name="HasRagdoll" value="false"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+					
+			<property name="Mass" value="40"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone.prefab"/>
+			
+			<property name="MaxTurnSpeed" value="180"/>
+			<property name="MoveSpeed" value="1.3"/>
+			<property name="MoveSpeedPanic" value="1.55"/>      
+			<property name="MoveSpeedAggro" value="1.5, 2.25"/> 
+			<property name="JumpMaxDistance" value="18, 20"/> 
+			
+			<property name="HandItem" value="handMedicalDrone"/>
+			
+			<property name="Immunity" value="sickness;disease;wellness"/>
+			
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="1"/>
+			<property name="AIPathCostScale" value=".4, .6"/>
+			
+		<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,0"/> 
+		
+			<property name="AITask-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0"/> 
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,0"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityPlayer,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityPlayer"/> 
+			<property name="AITarget-4" value=""/>  
+			
+				<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotRandom" />
+			<property name="SoundAttack" value="RobotRandom" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotRandom" /> 
+			
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="130"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value=".5"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+			
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="CanClimbLadders" value="true"/>
+			
+			<property name="ExperienceGain" value="2"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="480"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			
+			<drop event="Harvest" name="resourceScrapIron" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="5"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2"/>
+			<drop event="Harvest" name="resourceCloth" tag="salvageHarvest" count="12"/>
+			<property name="LootListAlive" value="130"/> 
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="SurfaceCategory" value="metal"/>  
+			<property name="Faction" value="whiteriver"/>	  
+		</entity_class>
+			
+		<entity_class name="BattleDrone" >
+			<property name="Tags" value="entity,mech,template"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="ModelType" value="Standard"/>			
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="Parent" value="Animals"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+				<property name="Mesh" value="#@modfolder:Resources/BattleDrone.unity3d?BattleDrone.prefab"/>
+	
+						
+			<property name="MapIcon" value="ui_game_symbol_enemy_dot" /> 
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_animal_tracker"/> 
+			
+			<property name="HandItem" value="handDrone"/>
+			
+			<property name="RotateToGround" value="false"/>
+				<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="40"/>
+			<property name="Weight" value="100"/>			
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> 	
+			
+			<property name="SizeScale" value="1"/>
+			
+			<property name="MaxTurnSpeed" value="180"/>
+			<property name="MoveSpeed" value="1.3"/>
+			<property name="MoveSpeedPanic" value="1.55"/>      
+			<property name="MoveSpeedAggro" value="1.5, 2.25"/> 
+			<property name="JumpMaxDistance" value="16, 17"/> 
+			
+			
+			<property name="Immunity" value="sickness;disease;wellness"/>
+			
+			<property name="AIGroupCircle" value="20"/>
+			<property name="AINoiseSeekDist" value="50"/>
+			<property name="AIPathCostScale" value="1, 2"/>
+				<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=4;minRange=1;maxRange=180;class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/>			
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-9" value="BreakBlock"/> 
+			<property name="AITask-10" value="Leap"/> 
+			<property name="AITask-11" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>  
+				
+				<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotRandom" />
+			<property name="SoundAttack" value="RobotRandom" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotRandom" /> 
+			
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="70"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="7,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="11,12"/>
+			<property name="SleeperSmellSenseThreshold" value="40,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value="1"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+			
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="CanClimbLadders" value="true"/>
+			
+			<property name="ExperienceGain" value="2"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="480"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			
+			<drop event="Harvest" name="resourceScrapIron" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="5"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2"/>
+			<drop event="Harvest" name="resourceCloth" tag="salvageHarvest" count="12"/>
+			<property name="LootListAlive" value="130"/> 
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="SurfaceCategory" value="metal"/>  
+			<property name="Faction" value="whiteriver"/>	  
+		</entity_class>	
+		
+		
+		<entity_class name="DroneBomber" >
+			<property name="Tags" value="entity,mech,template"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="ModelType" value="Standard"/>			
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="Parent" value="Animals"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+				<property name="Mesh" value="#@modfolder:Resources/BattleDrone.unity3d?BattleDrone.prefab"/>
+	
+						
+			<property name="MapIcon" value="ui_game_symbol_enemy_dot" /> 
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_animal_tracker"/> 
+			
+			<property name="HandItem" value="handDroneBomber"/>
+			
+			<property name="RotateToGround" value="false"/>
+				<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="40"/>
+			<property name="Weight" value="100"/>			
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> 	
+			
+			<property name="SizeScale" value="1"/>
+			
+			<property name="MaxTurnSpeed" value="180"/>
+			<property name="MoveSpeed" value="1.3"/>
+			<property name="MoveSpeedPanic" value="1.55"/>      
+			<property name="MoveSpeedAggro" value="1.5, 2.25"/> 
+			<property name="JumpMaxDistance" value="16, 17"/> 
+			
+			<property name="Immunity" value="sickness;disease;wellness"/>
+			
+			<property name="AIGroupCircle" value="20"/>
+			<property name="AINoiseSeekDist" value="50"/>
+			<property name="AIPathCostScale" value="1, 2"/>
+				<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=4;minRange=1;maxRange=180;class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/>			
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-9" value="BreakBlock"/> 
+			<property name="AITask-10" value="Leap"/> 
+			<property name="AITask-11" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>  
+				
+				<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotRandom" />
+			<property name="SoundAttack" value="RobotRandom" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotRandom" /> 
+			
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="70"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="7,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="11,12"/>
+			<property name="SleeperSmellSenseThreshold" value="40,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value="1"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+			
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="CanClimbLadders" value="true"/>
+			
+			<property name="ExperienceGain" value="2"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="480"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			
+			<drop event="Harvest" name="resourceScrapIron" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="5"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2"/>
+			<drop event="Harvest" name="resourceCloth" tag="salvageHarvest" count="12"/>
+			<property name="LootListAlive" value="130"/> 
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="SurfaceCategory" value="metal"/>  
+			<property name="Faction" value="whiteriver"/>	  
+		</entity_class>	
+	</append>
+</configs>

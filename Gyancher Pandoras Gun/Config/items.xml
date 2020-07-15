@@ -1,0 +1,144 @@
+<configs>
+	
+<append xpath="/items">
+	
+<item name="Pandoras Gun">
+	<property name="DisplayType" value="rangedGun"/>
+	
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,selfLoading,attAgility,perkGunslinger,9mmGun,canHaveCosmetic,admin"/>
+	<property name="DisplayType" value="adminRanged"/>
+	<property name="HoldType" value="6"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/MP5/MP5Prefab.prefab"/>
+	<Property name="TintColor" value="0,128,128"/>
+	<property name="CustomIcon" value="Pandora"/>
+	<property name="Material" value="MHandGunParts"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	
+	<property name="LightSource" value="lightSource"/>
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/>
+			
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairUpAfterShot" value="true"/>
+	<property name="CrosshairOnAim" value="true"/>
+	<property name="ShowQuality" value="true"/>
+	
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Magazine_items" value="ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP"/>
+			<property name="Buff" value="Shocked"/>
+		<property name="Buff_chance" value="1"/>
+		<property name="Sound_start" value="mp5_s_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="pistol_reload"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv"/>
+		<property name="Single_magazine_usage" value="false"/>
+		
+		<property name="Infinite_ammo" value="true"/>
+		
+		<property name="ToolCategory.Disassemble" value="1" param1="1"/>
+		<property name="SupportHarvesting" value="true"/> 		
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="ToolCategory.cropHarvest" value="1" param1="1"/>		
+	</property>
+	<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="CrosshairOnAim" value="true"/>
+				<property name="Zoom_max_out" value="10"/>
+				<property name="Zoom_max_in" value="5"/>
+		
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="0,0,0"/>
+				
+				<property name="ScopeScale" value="0.7,0.7,0.7"/>
+				<property name="ScopeCameraOffset" value="0,0,0"/>
+				
+		</property>
+		
+		<!-- Changes damage type to heat -->
+		<item_property_overrides name="*">
+			<property name="DamageType" value="Heat"/>
+			<property name="DamageType" value="Electrical"/>
+			<property name="DamageType" value="Cold"/>
+		</item_property_overrides>
+		
+	<effect_group>
+		<passive_effect name="MaxRange" operation="base_set" value="200"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="200"/>
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="550"/>
+		<passive_effect name="RoundRayCount" operation="base_set" value="16"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="100"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="500"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+
+		<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="100" tags="primary,secondary"/>
+		
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-0"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="0"/>
+
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-0"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="0"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.6"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.6"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".05"/>
+		
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.2"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9999" tags="admin"/>
+		
+		<passive_effect name="AttributeLevel" operation="base_set" value="10"/>
+		<passive_effect name="SkillLevel" operation="base_set" value="1"/>
+		<passive_effect name="PerkLevel" operation="base_set" value="5"/>
+			
+		<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="admin"/>
+		
+		<passive_effect name="ModSlots" operation="base_set" value="6"/>
+			
+			
+				<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToHeldItem" prefab="#Other/Items?Mods/Sides/pistol_flashlightPrefab.prefab" parent_transform="main1" local_offset="0,.09,-.034" local_rotation="-90,0,0"/>
+		
+			<!-- Barrel -->
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#Other/Items?Mods/Barrels/SilencerPrefab.prefab" parent_transform="Attachments/Barrel">
+				</triggered_effect>
+				
+				
+			<!-- Side	 -->
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#Other/Items?Mods/Sides/side_attachment_laserPrefab.prefab" parent_transform="Attachments/Side" local_rotation="0,0,0"/>
+				<triggered_effect trigger="onSelfItemActivate" action="SetTransformChildrenActive" active="true" parent_transform="Side" transform_path="gun_laser"/>
+				<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+		
+		
+		
+			</effect_group>	
+			
+			<effect_group name="Pandoras Gun">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformChildrenActive" active="true" parent_transform="Handle" transform_path="Barrel"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="BarrelL" prefab="#Other/Items?Weapons/Ranged/AK47/ak47_flashlight.fbx" parentTransform="Barrel/Muzzle_L" localPos="0.04,.04,-0.15" localRot="180,90,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="BarrelR" prefab="#Other/Items?Weapons/Ranged/AK47/ak47_flashlight.fbx" parentTransform="Barrel/Muzzle_R" localPos="0.051,.04,-0.15" localRot="180,90,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="BarrelTL" prefab="#Other/Items?Weapons/Ranged/SniperRifle/sniperRifle_flashlight.fbx" parentTransform="Barrel/Muzzle_L" localPos="-.005,.04,0.21" localRot="0,180,180"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" parent_transform="Muzzle_L" transform_path="Handle"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="BarrelTR" prefab="#Other/Items?Weapons/Ranged/SniperRifle/sniperRifle_flashlight.fbx" parentTransform="Barrel/Muzzle_R" localPos=".005,.04,0.21" localRot="0,180,180"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" parent_transform="Muzzle_R" transform_path="Handle"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="HammerA" prefab="#Other/Items?Mods/IronSights/mp5_ironsights.fbx" parentTransform="Handle" localPos="-.015,-.02,.35" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="HammerB" prefab="#Other/Items?Mods/IronSights/mp5_ironsights.fbx" parentTransform="Muzzle" localPos=".015,-.075,-.045" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="BarrelL"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="BarrelR"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="BarrelTL"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="BarrelTR"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HammerA"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HammerB"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" parent_transform="Muzzle_L" transform_path="Handle"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" parent_transform="Muzzle_R" transform_path="Handle"/>
+				
+			</effect_group>
+</item>
+
+</append>
+
+</configs>

@@ -1,0 +1,302 @@
+<configs>
+
+<append xpath="/progression/attributes">
+
+	<attribute name="attPrestige" name_key="Prestige" desc_key="Spend some of that redundant skill points on some neat extra effects!" icon="ui_game_symbol_lock" min_level="0" max_level="0" base_skill_point_cost="0"/>
+
+</append>
+
+<append xpath="/progression">
+<perks min_level="0" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1" max_level_ratio_to_parent="10">
+
+	<perk name="perkMaxHP" parent="attPrestige" name_key="Maximum Health" desc_key="Increase your hardiness and thus your maximum health." icon="ui_game_symbol_add">
+		<effect_group>
+
+			<passive_effect name="HealthMax" operation="base_add" value="5,50" level="1,10"/>
+
+			<effect_description level="0" desc_base="+ 0 Maximum Health" long_desc_key="Increase your maximum health by 0"/>
+			<effect_description level="1" desc_base="+ 5 Maximum Health" long_desc_key="Increase your maximum health by 5"/>
+			<effect_description level="2" desc_base="+ 10 Maximum Health" long_desc_key="Increase your maximum health by 10"/>
+			<effect_description level="3" desc_base="+ 15 Maximum Health" long_desc_key="Increase your maximum health by 15"/>
+			<effect_description level="4" desc_base="+ 20 Maximum Health" long_desc_key="Increase your maximum health by 20"/>
+			<effect_description level="5" desc_base="+ 25 Maximum Health" long_desc_key="Increase your maximum health by 25"/>
+			<effect_description level="6" desc_base="+ 30 Maximum Health " long_desc_key="Increase your maximum health by 30"/>
+			<effect_description level="7" desc_base="+ 35 Maximum Health" long_desc_key="Increase your maximum health by 35"/>
+			<effect_description level="8" desc_base="+ 40 Maximum Health" long_desc_key="Increase your maximum health by 45"/>
+			<effect_description level="9" desc_base="+ 45 Maximum Health" long_desc_key="Increase your maximum health by 40"/>
+			<effect_description level="10" desc_base="+ 50 Maximum Health" long_desc_key="Increase your maximum health by 50"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkMaxSta" parent="attPrestige" name_key="Maximum Stamina" desc_key="Increase your endurance and thus your maximum stamina." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="StaminaMax" operation="base_add" value="5,50" level="1,10"/>
+	
+			<effect_description level="0" desc_base="+ 0 Maximum Stamina" long_desc_key="Increase your maximum stamina by 0"/>
+			<effect_description level="1" desc_base="+ 5 Maximum Stamina" long_desc_key="Increase your maximum stamina by 5"/>
+			<effect_description level="2" desc_base="+ 10 Maximum Stamina" long_desc_key="Increase your maximum stamina by 10"/>
+			<effect_description level="3" desc_base="+ 15 Maximum Stamina" long_desc_key="Increase your maximum stamina by 15"/>
+			<effect_description level="4" desc_base="+ 20 Maximum Stamina" long_desc_key="Increase your maximum stamina by 20"/>
+			<effect_description level="5" desc_base="+ 25 Maximum Stamina" long_desc_key="Increase your maximum stamina by 25"/>
+			<effect_description level="6" desc_base="+ 30 Maximum Stamina" long_desc_key="Increase your maximum stamina by 30"/>
+			<effect_description level="7" desc_base="+ 35 Maximum Stamina" long_desc_key="Increase your maximum stamina by 35"/>
+			<effect_description level="8" desc_base="+ 40 Maximum Stamina" long_desc_key="Increase your maximum stamina by 45"/>
+			<effect_description level="9" desc_base="+ 45 Maximum Stamina" long_desc_key="Increase your maximum stamina by 40"/>
+			<effect_description level="10" desc_base="+ 50 Maximum Stamina" long_desc_key="Increase your maximum stamina by 50"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkRSM" parent="attPrestige" name_key="Reload Speed" desc_key="All this reloading earned you some nimble fingers. Reload even faster now."  icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,10" value=".05,.5"/>
+
+			<effect_description level="0" desc_base="+ 0% Reload Speed" long_desc_key="Increase your Reload Speed by 0%"/>
+			<effect_description level="1" desc_base="+ 5% Reload Speed" long_desc_key="Increase your Reload Speed by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Reload Speed " long_desc_key="Increase your Reload Speed by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Reload Speed " long_desc_key="Increase your Reload Speed by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Reload Speed" long_desc_key="Increase your Reload Speed by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Reload Speed" long_desc_key="Increase your Reload Speed by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Reload Speed" long_desc_key="Increase your Reload Speed by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Reload Speed" long_desc_key="Increase your Reload Speed by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Reload Speed" long_desc_key="Increase your Reload Speed by 45%"/>
+			<effect_description level="9" desc_base="+ 45% Reload Speed" long_desc_key="Increase your Reload Speed by 40%"/>
+			<effect_description level="10" desc_base="+ 50% Reload Speed" long_desc_key="Increase your Reload Speed by 50%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkAPM" parent="attPrestige" name_key="Attack Speed" desc_key="All those blows you've dealt evolved into a daily routine. Now you're able too attack even faster." icon="ui_game_symbol_add">
+		<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,10" value=".05,.5"/>
+
+			<effect_description level="0" desc_base="+ 0% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 0%"/>
+			<effect_description level="1" desc_base="+ 5% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 45%"/>
+			<effect_description level="9" desc_base="+ 45% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 40%"/>
+			<effect_description level="10" desc_base="+ 50% Melee Attack Speed" long_desc_key="Increase your Attack Speed with melee tools and weapons by 50%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkMobility" parent="attPrestige" name_key="Running Speed" desc_key="Running hundreds and thousands of miles earned you some well conditioned legs. You're now able too move faster independent of the circumstances." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="Mobility" operation="perc_add" level="1,10" value=".03,.3"/>
+
+			<effect_description level="0" desc_base="+ 0% Mobility" long_desc_key="Increase your mobility by 0%"/>
+			<effect_description level="1" desc_base="+ 3% Mobility" long_desc_key="Increase your mobility by 3%"/>
+			<effect_description level="2" desc_base="+ 6% Mobility" long_desc_key="Increase your mobility by 6%"/>
+			<effect_description level="3" desc_base="+ 9% Mobility" long_desc_key="Increase your mobility by 9%"/>
+			<effect_description level="4" desc_base="+ 12% Mobility" long_desc_key="Increase your mobility by 12%"/>
+			<effect_description level="5" desc_base="+ 15% Mobility" long_desc_key="Increase your mobility by 15%"/>
+			<effect_description level="6" desc_base="+ 18% Mobility" long_desc_key="Increase your mobility by 18%"/>
+			<effect_description level="7" desc_base="+ 21% Mobility" long_desc_key="Increase your mobility by 21%"/>
+			<effect_description level="8" desc_base="+ 24% Mobility" long_desc_key="Increase your mobility by 24%"/>
+			<effect_description level="9" desc_base="+ 27% Mobility" long_desc_key="Increase your mobility by 27%"/>
+			<effect_description level="10" desc_base="+ 30% Mobility" long_desc_key="Increase your mobility by 30%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkBD" parent="attPrestige" name_key="Block Damage" desc_key="Hitting all kinds of materials day and night made you really buff. You're even stronger now." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,10" value=".1,1"/>
+
+			<effect_description level="0" desc_base="+ 0% Block Damage" long_desc_key="Increase your Block Damage by 0%"/>
+			<effect_description level="1" desc_base="+ 10% Block Damage" long_desc_key="Increase your Block Damage by 10%"/>
+			<effect_description level="2" desc_base="+ 20% Block Damage" long_desc_key="Increase your Block Damage by 20%"/>
+			<effect_description level="3" desc_base="+ 30% Block Damage" long_desc_key="Increase your Block Damage by 30%"/>
+			<effect_description level="4" desc_base="+ 40% Block Damage" long_desc_key="Increase your Block Damage by 40%"/>
+			<effect_description level="5" desc_base="+ 50% Block Damage" long_desc_key="Increase your Block Damage by 50%"/>
+			<effect_description level="6" desc_base="+ 60% Block Damage" long_desc_key="Increase your Block Damage by 60%"/>
+			<effect_description level="7" desc_base="+ 70% Block Damage" long_desc_key="Increase your Block Damage by 70%"/>
+			<effect_description level="8" desc_base="+ 80% Block Damage" long_desc_key="Increase your Block Damage by 80%"/>
+			<effect_description level="9" desc_base="+ 90% Block Damage" long_desc_key="Increase your Block Damage by 90%"/>
+			<effect_description level="10" desc_base="+ 100% Block Damage" long_desc_key="Increase your Block Damage by 100%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkED" parent="attPrestige" name_key="Entity Damage" desc_key="Eviscerating and crushing zeds the whole time, you now know where you need to hit. Increase your damage to entities even more." icon="ui_game_symbol_add">
+		<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,10" value=".05,.5"/>
+
+			<effect_description level="0" desc_base="+ 0% Entity Damage" long_desc_key="Increase your Entity Damage by 0%"/>
+			<effect_description level="1" desc_base="+ 5% Entity Damage" long_desc_key="Increase your Entity Damage by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Entity Damage" long_desc_key="Increase your Entity Damage by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Entity Damage" long_desc_key="Increase your Entity Damage by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Entity Damage" long_desc_key="Increase your Entity Damage by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Entity Damage" long_desc_key="Increase your Entity Damage by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Entity Damage" long_desc_key="Increase your Entity Damage by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Entity Damage" long_desc_key="Increase your Entity Damage by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Entity Damage" long_desc_key="Increase your Entity Damage by 45%"/>
+			<effect_description level="9" desc_base="+ 45% Entity Damage" long_desc_key="Increase your Entity Damage by 40%"/>
+			<effect_description level="10" desc_base="+ 50% Entity Damage" long_desc_key="Increase your Entity Damage by 50%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkHarvester" parent="attPrestige" name_key="More Resources" desc_key="You've acquired the knowledge how to gather more resources from any source." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,10" value=".05,.5"/>
+
+			<effect_description level="0" desc_base="+ 0% More Resources" long_desc_key="Gather rate of resources increased by 0%"/>
+			<effect_description level="1" desc_base="+ 5% More Resources" long_desc_key="Gather rate of resources increased by 5%"/>
+			<effect_description level="2" desc_base="+ 10% More Resources" long_desc_key="Gather rate of resources increased by 10%"/>
+			<effect_description level="3" desc_base="+ 15% More Resources" long_desc_key="Gather rate of resources increased by 15%"/>
+			<effect_description level="4" desc_base="+ 20% More Resources" long_desc_key="Gather rate of resources increased by 20%"/>
+			<effect_description level="5" desc_base="+ 25% More Resources" long_desc_key="Gather rate of resources increased by 25%"/>
+			<effect_description level="6" desc_base="+ 30% More Resources" long_desc_key="Gather rate of resources increased by 30%"/>
+			<effect_description level="7" desc_base="+ 35% More Resources" long_desc_key="Gather rate of resources increased by 35%"/>
+			<effect_description level="8" desc_base="+ 40% More Resources" long_desc_key="Gather rate of resources increased by 45%"/>
+			<effect_description level="9" desc_base="+ 45% More Resources" long_desc_key="Gather rate of resources increased by 40%"/>
+			<effect_description level="10" desc_base="+ 50% More Resources" long_desc_key="Gather rate of resources increased by 50%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkLooter" parent="attPrestige" name_key="Better Loot" desc_key="You're even more observant now. You know where to look for the good stuff. Find even more and better loot now." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="LootGamestage" operation="base_add" level="1,10" value="25,250"/>
+
+			<effect_description level="0" desc_base="+ 0 Loot Bonus" long_desc_key="Add an additional 0 to the Loot Bonus."/>
+			<effect_description level="1" desc_base="+ 25 Loot Bonus" long_desc_key="Add an additional 25 to the Loot Bonus."/>
+			<effect_description level="2" desc_base="+ 50 Loot Bonus" long_desc_key="Add an additional 50 to the Loot Bonus."/>
+			<effect_description level="3" desc_base="+ 75 Loot Bonus" long_desc_key="Add an additional 75 to the Loot Bonus."/>
+			<effect_description level="4" desc_base="+ 100 Loot Bonus" long_desc_key="Add an additional 100 to the Loot Bonus."/>
+			<effect_description level="5" desc_base="+ 125 Loot Bonus" long_desc_key="Add an additional 125 to the Loot Bonus."/>
+			<effect_description level="6" desc_base="+ 150 Loot Bonus" long_desc_key="Add an additional 150 to the Loot Bonus."/>
+			<effect_description level="7" desc_base="+ 175 Loot Bonus" long_desc_key="Add an additional 175 to the Loot Bonus."/>
+			<effect_description level="8" desc_base="+ 200 Loot Bonus" long_desc_key="Add an additional 200 to the Loot Bonus."/>
+			<effect_description level="9" desc_base="+ 225 Loot Bonus" long_desc_key="Add an additional 225 to the Loot Bonus."/>
+			<effect_description level="10" desc_base="+ 250 Loot Bonus" long_desc_key="Add an additional 250 to the Loot Bonus."/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkDismember" parent="attPrestige" name_key="Dismemberment" desc_key="Aim for the weak spots and even more lethal hits. Get additional chance to dismember." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="DismemberChance" operation="base_add" level="1,10" value=".02,.2"/>
+
+			<effect_description level="0" desc_base="+ 0% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 0%"/>
+			<effect_description level="1" desc_base="+ 2% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 2%"/>
+			<effect_description level="2" desc_base="+ 4% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 4%"/>
+			<effect_description level="3" desc_base="+ 6% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 6%"/>
+			<effect_description level="4" desc_base="+ 8% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 8%"/>
+			<effect_description level="5" desc_base="+ 10% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 10%"/>
+			<effect_description level="6" desc_base="+ 12% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 12%"/>
+			<effect_description level="7" desc_base="+ 14% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 14%"/>
+			<effect_description level="8" desc_base="+ 16% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 16%"/>
+			<effect_description level="9" desc_base="+ 18% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 18%"/>
+			<effect_description level="10" desc_base="+ 20% Dismember Chance" long_desc_key="Increase your chance of dismemberment by 20%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkRPM" parent="attPrestige" name_key="Fire Rate" desc_key="You know where you need too shoot. Fire your weapons even faster now." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,10" value=".05,.5"/>
+
+			<effect_description level="0" desc_base="+ 0% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 0%"/>
+			<effect_description level="1" desc_base="+ 5% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 45%"/>
+			<effect_description level="9" desc_base="+ 45% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 40%"/>
+			<effect_description level="10" desc_base="+ 50% Fire Rate" long_desc_key="Increase the fire rate of your ranged weapons by 50%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkWH" parent="attPrestige" name_key="Weapon Handling" desc_key="You gradually grow familiar with weapons thus your weapon handling increases." icon="ui_game_symbol_add">
+		<effect_group>
+				<passive_effect name="WeaponHandling" operation="perc_add" level="1,10" value=".05,.5"/>
+
+			<effect_description level="0" desc_base="+ 0% Weapon Handling" long_desc_key="Increase your Weapon Handling by 0%"/>
+			<effect_description level="1" desc_base="+ 5% Weapon Handling" long_desc_key="Increase your Weapon Handling by 5%"/>
+			<effect_description level="2" desc_base="+ 10% Weapon Handling" long_desc_key="Increase your Weapon Handling by 10%"/>
+			<effect_description level="3" desc_base="+ 15% Weapon Handling" long_desc_key="Increase your Weapon Handling by 15%"/>
+			<effect_description level="4" desc_base="+ 20% Weapon Handling" long_desc_key="Increase your Weapon Handling by 20%"/>
+			<effect_description level="5" desc_base="+ 25% Weapon Handling" long_desc_key="Increase your Weapon Handling by 25%"/>
+			<effect_description level="6" desc_base="+ 30% Weapon Handling" long_desc_key="Increase your Weapon Handling by 30%"/>
+			<effect_description level="7" desc_base="+ 35% Weapon Handling" long_desc_key="Increase your Weapon Handling by 35%"/>
+			<effect_description level="8" desc_base="+ 40% Weapon Handling" long_desc_key="Increase your Weapon Handling by 45%"/>
+			<effect_description level="9" desc_base="+ 45% Weapon Handling" long_desc_key="Increase your Weapon Handling by 40%"/>
+			<effect_description level="10" desc_base="+ 50% Weapon Handling" long_desc_key="Increase your Weapon Handling by 50%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkQuester" parent="attPrestige" name_key="Revered" desc_key="You've made yourself quite the name and people are now even more grateful for your help in these times." icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="QuestBonusItemReward" operation="perc_add" level="1,10" value=".2,2"/>
+
+			<effect_description level="0" desc_base="+ 0% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 0%"/>
+			<effect_description level="1" desc_base="+ 20% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 20%"/>
+			<effect_description level="2" desc_base="+ 40% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 40%"/>
+			<effect_description level="3" desc_base="+ 60% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 60%"/>
+			<effect_description level="4" desc_base="+ 80% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 80%"/>
+			<effect_description level="5" desc_base="+ 100% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 100%"/>
+			<effect_description level="6" desc_base="+ 120% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 120%"/>
+			<effect_description level="7" desc_base="+ 140% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 140%"/>
+			<effect_description level="8" desc_base="+ 160% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 160%"/>
+			<effect_description level="9" desc_base="+ 180% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 180%"/>
+			<effect_description level="10" desc_base="+ 200% Quest Reward" long_desc_key="Increase the amount of Quest Rewards by 200%"/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkLargeMag" parent="attPrestige" name_key="Larger Magazines" desc_key="Store additional ammo in your magazines and show those zeds what non-stop damage means" long_desc_key="perkLargeMagLongDesc" icon="ui_game_symbol_add">
+		<effect_group>
+			<passive_effect name="MagazineSize" operation="perc_add" level="1,10" value="0.05,.5"/>
+
+			<effect_description level="0" desc_base="+ 0% Larger Magazines" long_desc_key="Store 0% additional ammo in your weapons clips."/>
+			<effect_description level="1" desc_base="+ 5% Larger Magazines" long_desc_key="Store 5% additional ammo in your weapons clips."/>
+			<effect_description level="2" desc_base="+ 10% Larger Magazines" long_desc_key="Store 10% additional ammo in your weapons clips."/>
+			<effect_description level="3" desc_base="+ 15% Larger Magazines" long_desc_key="Store 15% additional ammo in your weapons clips."/>
+			<effect_description level="4" desc_base="+ 20% Larger Magazines" long_desc_key="Store 20% additional ammo in your weapons clips."/>
+			<effect_description level="5" desc_base="+ 25% Larger Magazines" long_desc_key="Store 25% additional ammo in your weapons clips."/>
+			<effect_description level="6" desc_base="+ 30% Larger Magazines" long_desc_key="Store 30% additional ammo in your weapons clips."/>
+			<effect_description level="7" desc_base="+ 35% Larger Magazines" long_desc_key="Store 35% additional ammo in your weapons clips."/>
+			<effect_description level="8" desc_base="+ 40% Larger Magazines" long_desc_key="Store 40% additional ammo in your weapons clips."/>
+			<effect_description level="9" desc_base="+ 45% Larger Magazines" long_desc_key="Store 45% additional ammo in your weapons clips."/>
+			<effect_description level="10" desc_base="+ 50% Larger Magazines" long_desc_key="Store 50% additional ammo in your weapons clips."/>
+
+		</effect_group>
+	</perk>
+
+	<perk name="perkSneakDMG" parent="attPrestige" name_key="Sneak Damage" desc_key="Increase your Sneak Damage against unaware enemies. (Pick this after 'Hidden Strike' for correct multiplier display)" long_desc_key="perkSneakDMGLongDesc" icon="ui_game_symbol_add">
+		<effect_group>
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				<passive_effect name="DamageBonus" operation="base_set" level="1,10" value="4.2,6"/> <!--For UI-->
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,10" value="0.2,2"/>
+
+			<effect_description level="0" desc_base="+ 0 Sneak Damage" long_desc_key="Increase Sneak Damage by 0"/>
+			<effect_description level="1" desc_base="+ 20% Sneak Damage" long_desc_key="Increase Sneak Damage by 20%"/>
+			<effect_description level="2" desc_base="+ 40% Sneak Damage" long_desc_key="Increase Sneak Damage by 40%"/>
+			<effect_description level="3" desc_base="+ 60% Sneak Damage" long_desc_key="Increase Sneak Damage by 60%"/>
+			<effect_description level="4" desc_base="+ 80% Sneak Damage" long_desc_key="Increase Sneak Damage by 80%"/>
+			<effect_description level="5" desc_base="+ 100% Sneak Damage" long_desc_key="Increase Sneak Damage by 100%"/>
+			<effect_description level="6" desc_base="+ 120% Sneak Damage" long_desc_key="Increase Sneak Damage by 120%"/>
+			<effect_description level="7" desc_base="+ 140% Sneak Damage" long_desc_key="Increase Sneak Damage by 140%"/>
+			<effect_description level="8" desc_base="+ 160% Sneak Damage" long_desc_key="Increase Sneak Damage by 160%"/>
+			<effect_description level="9" desc_base="+ 180% Sneak Damage" long_desc_key="Increase Sneak Damage by 180%"/>
+			<effect_description level="10" desc_base="+ 200% Sneak Damage" long_desc_key="Increase Sneak Damage by 200%"/>
+
+		</effect_group>
+	</perk>
+</perks>
+</append>
+</configs>

@@ -1,0 +1,8 @@
+<configs>
+
+<append xpath="/rwgmixer/prefab_rules/prefab_rule[@name='residentialNew_Bldgs']">
+<prefab name="HNHOUSE" max_count="1" prob="1" />
+<prefab name="HNMODERNHOUSE" max_count="1" prob="1" />
+</append>
+
+</configs>

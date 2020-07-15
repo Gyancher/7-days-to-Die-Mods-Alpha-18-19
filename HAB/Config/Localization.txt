@@ -1,0 +1,11 @@
+Key,Source,Context,Changes,English
+vehicleHABchassis,items,Part,EnChanged,HAB Chassis,,,,,
+vehicleHABchassisDesc,items,Part,EnChanged,Parts needed to craft the HAB. Grease Monkey level 5 required.,,,,,
+vehicleHABaccessories,items,Part,EnChanged,HAB Accessories,,,,,
+vehicleHABaccessoriesDesc,items,Part,EnChanged,Parts needed to craft the HAB.,,,,,
+vehicleHABburner,items,Part,EnChanged,HAB Burners,,,,,
+vehicleHABburnerDesc,items,Part,EnChanged,Parts needed to craft the HAB.,,,,,
+vehicleHAB,vehicles,vehicle,new,HAB,,,,,
+vehicleHABplaceable,vehicles,item,EnChanged,HAB,,,,,
+vehicleHABplaceableDesc,vehicles,item,EnChanged,Up up and away!,,,,,
+

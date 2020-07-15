@@ -1,0 +1,25 @@
+<configs>
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsBurntForest']">
+		<entity name="animalCrow" prob="1" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
+		<entity name="animalCrow" prob="1" />
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsPlains']">
+		<entity name="animalGoat" prob="1" />
+		<entity name="animalRobin" prob="1" />
+		<entity name="animalCrow" prob="1" />
+		<entity name="animalBat" prob="1" />
+		<entity name="animalBats" prob=".25" />
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='AnimalsAll']">
+		<entity name="animalGoat" prob="1" />
+		<entity name="animalRobin" prob="1" />
+		<entity name="animalCrow" prob="1" />
+		<entity name="animalBat" prob="1" />
+		<entity name="animalBats" prob=".25" />
+		<entity name="animalEagle" prob="1" />
+	</append>
+</configs> 

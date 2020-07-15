@@ -1,0 +1,5 @@
+<configs> 
+    
+<set xpath="/perks/perk[@name='perkGreaseMonkey']/passive_effect[@name='RecipeTagUnlocked' and @level='4']/@tags">vehicle4x4TruckChassis,vehicle4x4TruckAccessories,vehicleQuadraVtechChassis,vehicleQuadraVtechAccessories</set>                  
+     
+</configs>    

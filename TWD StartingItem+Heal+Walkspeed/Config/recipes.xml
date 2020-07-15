@@ -1,0 +1,92 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="bookBundleFiremansAlmanac" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleNightStalker" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleLuckyLooter" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleEnforcer" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleBatterUp" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleGreatHeist" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleWasteTreasures" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleNeedleAndThread" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleHuntingJournal" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleArtOfMining" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleRangers" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundlePistolPete" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleShotgunMessiah" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleSniper" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleAutoWeapons" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		<recipe name="bookBundleUrbanCombat" count="1" craft_exp_gain="0" craft_time="1">
+			<ingredient name="starterPackBook" count="1"/>
+		</recipe>
+		
+<recipe name="HDMilitaryVest" count="1" craft_time = "60" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="resourceMilitaryFiber" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+	
+<recipe name="HDMilitaryGloves" count="1" craft_time = "60" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="resourceMilitaryFiber" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+		
+<recipe name="HDMilitaryLegs" count="1" craft_time = "60" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="resourceMilitaryFiber" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+	
+<recipe name="HDMilitaryBoots" count="1" craft_time = "60" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="resourceMilitaryFiber" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+	
+<recipe name="HDMilitaryHelmet" count="1" craft_time = "60" tags="learnable,perkLightArmor">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="resourceMilitaryFiber" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+</recipe>
+	</append>
+</configs>

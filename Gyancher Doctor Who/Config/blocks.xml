@@ -1,0 +1,142 @@
+<configs>
+	<append xpath="/blocks">	
+		
+	 
+	
+	  <block name="WindmillBig">
+       <property name="FilterTags" value="fdecor,felectrical"/>
+	     <property name="Place" value="TowardsPlacerInverted"/>			
+	  <property name="OnlySimpleRotations" value="true"/>
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/Windmill.unity3d?P_OBJ_windmill_02.prefab"/>
+      <property name="CustomIcon" value="WindmillBig" />  
+      <!-- <property name="MultiBlockDim" value="1,2,2" /> -->
+	  <property name="ModelOffset" value="0,0.15,0"/> 
+  	<property name="PlaceEverywhere" value="true"/>
+	  <property name="Stabilitysupport" value="true"/>
+	  <property name="CreativeMode" value="Player"/>
+	  <property name="Stacknumber" value="1"/>
+	  <property name="Group" value="Basics,Building"/>	  
+	<property name="ImposterDontBlock" value="false"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	  <property name="Material" value="Mwood"/>  
+      <property name="Class" value="Loot"/>
+      <property name="LootList" value="49"/>  	  
+    </block> 
+	
+	
+	
+		
+	   <block name="Tardis">
+       <property name="FilterTags" value="fdecor,felectrical"/>
+	     <property name="Place" value="TowardsPlacerInverted"/>			
+	  <property name="OnlySimpleRotations" value="true"/>
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/tardjs.unity3d?Tardis.prefab"/>
+      <property name="CustomIcon" value="tardis" />  
+      <property name="MultiBlockDim" value="2,4,2" />
+	<property name="ModelOffset" value="0,2.5,0"/>
+  	<property name="PlaceEverywhere" value="true"/>
+	  <property name="Stabilitysupport" value="true"/>
+	  <property name="CreativeMode" value="Player"/>
+	  <property name="Stacknumber" value="1"/>
+	  <property name="Group" value="Basics,Building"/>	  
+	<property name="ImposterDontBlock" value="false"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	  
+	  <property name="Material" value="Mwood"/>  
+      <property name="Class" value="Loot"/>
+      <property name="LootList" value="49"/>  	  
+    </block> 
+	
+	   <block name="Dalek">
+       <property name="FilterTags" value="fdecor,felectrical"/>
+	     <property name="Place" value="TowardsPlacerInverted"/>			
+	  <property name="OnlySimpleRotations" value="false"/>
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/dalek.unity3d?dalek.prefab"/>
+      <property name="CustomIcon" value="dalek" />  
+      <property name="MultiBlockDim" value="2,3,2" />
+	<property name="ModelOffset" value="0,.5,0"/>
+  	<property name="PlaceEverywhere" value="true"/>
+	  <property name="Stabilitysupport" value="true"/>
+	  <property name="CreativeMode" value="Player"/>
+	  <property name="Stacknumber" value="10"/>
+	  <property name="Group" value="Basics,Building"/>	  
+	<property name="ImposterDontBlock" value="false"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	  
+	  <property name="Material" value="Mwood"/>  
+      <property name="Class" value="Loot"/>
+      <property name="LootList" value="49"/>  	  
+    </block> 
+	
+	   <block name="K9">
+       <property name="FilterTags" value="fdecor,felectrical"/>
+	     <property name="Place" value="TowardsPlacerInverted"/>			
+	  <property name="OnlySimpleRotations" value="false"/>
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/K9.unity3d?K9.prefab"/>
+      <property name="CustomIcon" value="K9" />  
+      <property name="MultiBlockDim" value="2,3,2" />
+	<property name="ModelOffset" value="0,-1.5,0"/>
+  	<property name="PlaceEverywhere" value="true"/>
+	  <property name="Stabilitysupport" value="true"/>
+	  <property name="CreativeMode" value="Player"/>
+	  <property name="Stacknumber" value="1"/>
+	  <property name="Group" value="Basics,Building"/>	  
+	<property name="ImposterDontBlock" value="false"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	  
+	  <property name="Material" value="Mwood"/>  
+      <property name="Class" value="Loot"/>
+      <property name="LootList" value="49"/>  	  
+    </block> 
+	
+	  <block name="Cyberman">
+       <property name="FilterTags" value="fdecor,felectrical"/>
+	     <property name="Place" value="TowardsPlacerInverted"/>			
+	  <property name="OnlySimpleRotations" value="false"/>
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/cyberman.unity3d?cyberman.prefab"/>
+      <property name="CustomIcon" value="cyberman" />  
+      <property name="MultiBlockDim" value="1,2,1" />
+	 <property name="ModelOffset" value="0,.5,0"/>
+  	<property name="PlaceEverywhere" value="true"/>
+	  <property name="Stabilitysupport" value="true"/>
+	  <property name="CreativeMode" value="Player"/>
+	  <property name="Stacknumber" value="10"/>
+	  <property name="Group" value="Basics,Building"/>	  
+	<property name="ImposterDontBlock" value="false"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	  
+	  <property name="Material" value="Mwood"/>  
+      <property name="Class" value="Loot"/>
+      <property name="LootList" value="49"/>  	  
+    </block> 
+	
+	
+	  <block name="Pandorium">
+    <property name="Class" value="DoorSecure"/>
+		<property name="Material" value="Msteel"/>
+		<property name="CustomIcon" value="Pandorium" />
+		<property name="PassThroughDamage" value="true"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+		<!-- <property name="Tag" value="Door"/> -->
+		<!-- <property name="Place" value="Door"/> -->
+		<property name="PlaceEverywhere" value="true"/>
+		<property name="Model" value="#@modfolder:Resources/Pandorium.unity3d?Pandorium.prefab"/> <property name="ModelOffset" value="0,.5,0"/>
+		<property name="ImposterExclude" value="true"/>
+		<property name="OpenSound" value="open_door_jail"/>
+		<property name="CloseSound" value="close_door_jail"/>
+		<property class="RepairItems"> <property name="resourceForgedSteel" value="12"/> </property>
+		<drop event="Harvest" name="" count="0" tool_category="Disassemble"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Destroy" name="resourceSpring" count="0,2" prob="1" tool_category="Disassemble"/>
+		<drop event="Destroy" name="resourceMechanicalParts" count="0,2" prob="1" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceScrapIron" count="20,60"/>
+		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+		<property name="Group" value="Building,advBuilding"/>
+		<property name="FilterTags" value="fdecor,fdoors"/>  
+    </block> 
+	
+	
+	</append>
+</configs>

@@ -1,0 +1,68 @@
+<configs>
+	<append xpath="/items">	
+
+<item name="C4 Bomb">
+	<property name="HoldType" value="39"/>
+	<property name="CustomIcon" value="c4trap"/>
+		<property name="Meshfile" value="#@modfolder:Resources/trap.unity3d?cono.prefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="88"/>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="PlaceAsBlock"/>
+		<property name="Delay" value="0.5"/>
+		<property name="Blockname" value="bombgrow"/>
+		<property name="Change_item_to" value="C4 Remote"/>
+		<property name="Sound_start" value="beartrapresetsound"/>
+	</property>
+	
+	<property name="Group" value="Tools/Traps"/>
+</item>
+
+<item name="C4 Remote">
+<property name="CustomIcon" value="3remote"/>
+	<property name="Tags" value="weapon,perkExplosiveWeapons"/>
+	<property name="DisplayType" value="ammoGrenade"/>
+	<property name="Class" value="ItemClassTimeBomb"/>
+	<property name="HoldType" value="25"/>
+	<!-- 16 GOOD -->
+	<property name="Meshfile" value="#@modfolder:Resources/trap.unity3d?remote.prefab"/>
+	<property name="DropScale" value="1"/>
+	<property name="Material" value="Msatchel"/>
+	<property name="Stacknumber" value="40"/> <!-- STK explosives -->
+	<property name="EconomicValue" value="41"/>
+	<property name="Weight" value="0"/>
+	<property name="Explosion.ParticleIndex" value="0"/>
+	<property name="Explosion.RadiusBlocks" value="0"/>
+	<property name="Explosion.RadiusEntities" value="40"/>
+	<property name="Explosion.DamageBonus.stone" value="0"/>
+	<property name="Explosion.DamageBonus.metal" value="0"/>
+	<property name="Explosion.DamageBonus.earth" value="0"/> <!-- should work? -->
+	<property name="Explosion.DamageBonus.wood" value="0"/>
+	<property name="Explosion.DamageBonus.water" value="0"/>
+	<property name="Explosion.BlastPower" value="0"/> <!-- (int,100) how far ragdolls and such are flung -->
+	<property name="FuseTime" value="1"/> <!-- End: Needed for  time in sec, max 6 -->
+	<property class="Action0"> <!-- UseAction -->
+		<property name="Class" value="Activate"/>
+		<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+	</property>
+	<property name="ThrowableDecoy" value="true"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillScience"/>
+	<effect_group tiered="false">
+		<passive_effect name="BlockDamage" operation="base_set" value="0"/><display_value name="dExDamageBlock" value="0" />
+		<passive_effect name="EntityDamage" operation="base_set" value="0"/><display_value name="dExDamageEntity" value="0" />
+		<display_value name="dExRadius" value="2"/>
+	</effect_group>
+		<effect_group tiered="false">
+		<requirement name="NotHasBuff" target="self" buff="bufftimer"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" target="self" sound="remotebutton"/>
+<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="bufftimer"/>
+	</effect_group>
+</item>
+
+
+ </append>
+
+</configs>

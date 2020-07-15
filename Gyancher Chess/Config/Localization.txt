@@ -1,0 +1,28 @@
+Key,Source,Context,UsedInMainMenu,NoTranslate,english
+Chess BBishopDesc,items,Chess Piece,,,Black Chess piece
+Chess BKingDesc,items,Chess Piece,,,Black Chess piece
+Chess BKnightDesc,items,Chess Piece,,,Black Chess piece
+Chess BPawnDesc,items,Chess Piece,,,Black Chess piece
+Chess BQueenDesc,items,Chess Piece,,,Black Chess piece
+Chess BRookDesc,items,Chess Piece,,,Black Chess piece
+
+Chess WBishopDesc,items,Chess Piece,,,White Chess piece
+Chess WKingDesc,items,Chess Piece,,,White Chess piece
+Chess WKnightDesc,items,Chess Piece,,,White Chess piece
+Chess WPawnDesc,items,Chess Piece,,,White Chess piece
+Chess WQueenDesc,items,Chess Piece,,,White Chess piece
+Chess WRookDesc,items,Chess Piece,,,White Chess piece
+
+quest_PlayingChessDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheWhitePawnsDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheBlackPawnsDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheWhiteKnightsDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheBlackKnightsDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheWhiteBishopsDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheBlackBishopsDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheWhiteRooksDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheBlackRooksDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheWhiteQueenDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheBlackQueenDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheWhiteKingDesc,items,Quest - Note,,,Chess Pieces Quest Note
+quest_CraftTheBlackKingDesc	,items,Quest - Note,,,Chess Pieces Quest Note

@@ -1,0 +1,239 @@
+<configs>
+	<append xpath="/blocks">
+	
+		<block name="LiquidTopSoil">
+			<property name="Extends" value="terrTopSoil"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrTopSoil"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="Map.Color" value="180,20,180"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+			
+		<block name="LiquidStone">
+			<property name="Extends" value="terrStone"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrStone"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidSnow">
+			<property name="Extends" value="terrSnow"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrSnow"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidDirt">
+			<property name="Extends" value="terrDirt"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrDirt"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>		
+				
+		<block name="LiquidForestGround">
+			<property name="Extends" value="terrForestGround"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrForestGround"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>	
+		
+		<block name="LiquidBurntForestGround">
+			<property name="Extends" value="terrBurntForestGround"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrBurntForestGround"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidDesertGround">
+			<property name="Extends" value="terrDesertGround"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrDesertGround"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidSand">
+			<property name="Extends" value="terrSand"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrSand"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidSandStone">
+			<property name="Extends" value="terrSandStone"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrSandStone"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidGravel">
+			<property name="Extends" value="terrGravel"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrGravel"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidAsphalt">
+			<property name="Extends" value="terrAsphalt"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrAsphalt"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+		
+		<block name="LiquidAsphalt">
+			<property name="Extends" value="terrAsphalt"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrAsphalt"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+			
+			
+		<block name="LiquidFertileGrass">
+			<property name="Extends" value="terrFertileGrass"/>
+			<property name="Weight" value="0"/>
+			<property name="Class" value="LiquidMoving"/>
+			<property name="LiquidStatic" value="terrFertileGrass"/>
+			<property name="CustomIconTint" value="5e4545"/>
+			<property name="CustomIcon" value="bucketRiverWater"/>
+			<property name="ItemTypeIcon" value="triangle"/>
+			<property name="Map.Color" value="120,20,120"/>
+			<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceIronFragment" count="0" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceRockSmall" count="0"/>
+			<drop event="Fall" name="resourceIronFragment" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="0"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+		</block>
+	</append>
+</configs>

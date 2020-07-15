@@ -1,0 +1,26 @@
+<LootableStoreShelving>
+	<append xpath="/lootcontainers">
+			<lootcontainer id="999" count="1,2" size="4,3" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+			   <item name="foodCanCatfood" prob="0.1"/>
+				<item name="foodCanChili" prob="0.1"/>
+				<item name="foodCanDogfood" prob="0.1"/>
+				<item name="foodCanSham" prob="0.1"/>
+				<item name="foodCanMiso" prob="0.1"/>
+				<item name="foodCanPasta" prob="0.1"/>
+				<item name="foodCanPeas" prob="0.09"/>
+				<item name="foodCanSalmon" prob="0.1"/>
+				<item name="foodCanSoup" prob="0.08"/>
+				<item name="foodCanStock" prob="0.1"/>
+				<item name="foodCanTuna" prob="0.1"/>
+				<item name="foodCanPears" prob="0.1"/>
+				<item name="foodHoney" prob="0.06"/>
+				<item name="foodCornMeal" prob="0.1"/>
+				<item name="casinoCoin" prob="0.4" count="10"/>
+				<item group="drinks" prob="0.4"/>
+				<item group="junk"/>
+				<item group="commonBooks" prob="0.02" count="1"/>
+				<item group="tools" prob="0.05" count="1"/>
+				<item group="medicine" prob="0.05" count="1"/>
+		   </lootcontainer>
+	</append>
+</LootableStoreShelving>

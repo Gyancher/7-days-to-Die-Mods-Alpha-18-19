@@ -1,0 +1,9 @@
+<LootableStoreShelving>
+
+<!-- StoreShelving -->
+	<append xpath="/blocks/block[@name='storeShelving01']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="999"/>
+	</append>
+
+</LootableStoreShelving>

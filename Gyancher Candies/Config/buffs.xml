@@ -1,0 +1,282 @@
+<configs>
+  <append xpath="/buffs">
+
+	<buff name="buffDrugRecog" name_key="drugRecog" description_key="drugRecogDesc" icon="ui_game_symbol_candy_recog">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugRecogDisplay"/><display_value_format value="time"/>
+		<!-- Increase ranged damage 50% for 2 minutes. -->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRecogDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRecogDisplay" operation="set" value="@$buffDrugRecogDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRecogDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRecog">
+				<requirement name="CVarCompare" cvar="$buffDrugRecogDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugRecogDuration" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRecogDisplay" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value=".1"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugFortBites" name_key="drugFortBites" description_key="drugFortBitesDesc" icon="ui_game_symbol_candy_fortitude">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugFortBitesDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugFortBitesDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugFortBitesDisplay" operation="set" value="@$buffDrugFortBitesDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugFortBitesDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugFortBites">
+				<requirement name="CVarCompare" cvar="$buffDrugFortBitesDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugFortBitesDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugFortBitesDuration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="50" tags="coredamageresist"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="50" tags="heat,electrical"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value=".25"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugAtomJunkies" name_key="drugAtomJunkies" description_key="drugAtomJunkiesDesc" icon="ui_game_symbol_candy_atom_junkies">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugAtomJunkiesDisplay"/><display_value_format value="time"/>
+		<effect_group>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkDemolitionsExpert"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugAtomJunkiesDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugAtomJunkiesDisplay" operation="set" value="@$buffDrugAtomJunkiesDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugAtomJunkiesDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugAtomJunkies">
+				<requirement name="CVarCompare" cvar="$buffDrugAtomJunkiesDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugAtomJunkiesDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugAtomJunkiesDuration" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugCovertCats" name_key="drugCovertCats" description_key="drugCovertCatsDesc" icon="ui_game_symbol_candy_covert_cats">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugCovertCatsDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugCovertCatsDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugCovertCatsDisplay" operation="set" value="@$buffDrugCovertCatsDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugCovertCatsDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugCovertCats">
+				<requirement name="CVarCompare" cvar="$buffDrugCovertCatsDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugCovertCatsDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugCovertCatsDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				<passive_effect name="DamageBonus" operation="base_add" value=".5"/> <!--For UI-->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugEyeKandy" name_key="drugEyeKandy" description_key="drugEyeKandyDesc" icon="ui_game_symbol_candy_eye_candy">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugEyeKandyDisplay"/><display_value_format value="time"/>
+		<!-- Find that sparkling treasure easier with a drop of Eye Kandy. Increases perception 2 points for 2 minutes. Find much better loot. (add 35 to loot stage) -->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugEyeKandyDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugEyeKandyDisplay" operation="set" value="@$buffDrugEyeKandyDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugEyeKandyDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugEyeKandy">
+				<requirement name="CVarCompare" cvar="$buffDrugEyeKandyDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugEyeKandyDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugEyeKandyDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="LootGamestage" operation="base_add" value="5"/>
+			<passive_effect name="LootGamestage" operation="perc_add" value=".1"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugHackers" name_key="drugHackers" description_key="drugHackersDesc" icon="ui_game_symbol_candy_hackers">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugHackersDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugHackersDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugHackersDisplay" operation="set" value="@$buffDrugHackersDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugHackersDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugHackers">
+				<requirement name="CVarCompare" cvar="$buffDrugHackersDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugHackersDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugHackersDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".2" tags="perkSalvageOperations"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="-.05" tags="Harvesting"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugHealthBar" name_key="drugHealthBar" description_key="drugHealthBarDesc" icon="ui_game_symbol_candy_health_bar">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugHealthBarDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugHealthBarDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugHealthBarDisplay" operation="set" value="@$buffDrugHealthBarDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugHealthBarDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugHealthBar">
+				<requirement name="CVarCompare" cvar="$buffDrugHealthBarDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugHealthBarDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugHealthBarDuration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<!-- heal effect is rolled into $critHitNaturalHealingRate -->
+			<passive_effect name="BuffResistance" operation="base_add" value=".5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			<passive_effect name="HealthMax" operation="base_add" value="10"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugJailBreakers" name_key="drugJailBreakers" description_key="drugJailBreakersDesc" icon="ui_game_symbol_candy_jail_breakers">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugJailBreakersDisplay"/><display_value_format value="time"/>
+		<!-- Be the daddy to that stubborn lock. Add 1 rank to lockpicking for 2 minutes. -->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugJailBreakersDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugJailBreakersDisplay" operation="set" value="@$buffDrugJailBreakersDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugJailBreakersDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugJailBreakers">
+				<requirement name="CVarCompare" cvar="$buffDrugJailBreakersDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugJailBreakersDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugJailBreakersDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="LockPickBreakChance" operation="perc_subtract" value="2"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugNerdTats" name_key="drugNerdTats" description_key="drugNerdTatsDesc" icon="ui_game_symbol_candy_nerd_tats">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugNerdTatsDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugNerdTatsDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugNerdTatsDisplay" operation="set" value="@$buffDrugNerdTatsDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugNerdTatsDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugNerdTats">
+				<requirement name="CVarCompare" cvar="$buffDrugNerdTatsDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugNerdTatsDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugNerdTatsDuration" operation="set" value="0"/>
+		</effect_group>
+		<!-- effect is on the baton -->
+	</buff>
+
+	<buff name="buffDrugOhShitzDrops" name_key="drugOhShitzDrops" description_key="drugOhShitzDropsDesc" icon="ui_game_symbol_candy_oh_shitz">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugOhShitzDropsDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugOhShitzDropsDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugOhShitzDropsDisplay" operation="set" value="@$buffDrugOhShitzDropsDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugOhShitzDropsDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugOhShitzDrops">
+				<requirement name="CVarCompare" cvar="$buffDrugOhShitzDropsDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugOhShitzDropsDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugOhShitzDropsDuration" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugRockBusters" name_key="drugRockBusters" description_key="drugRockBustersDesc" icon="ui_game_symbol_candy_rock_busters">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugRockBustersDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRockBustersDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRockBustersDisplay" operation="set" value="@$buffDrugRockBustersDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRockBustersDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRockBusters">
+				<requirement name="CVarCompare" cvar="$buffDrugRockBustersDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRockBustersDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugRockBustersDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkMiner69r"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".2" tags="oreWoodHarvest"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="-.05" tags="Harvesting"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugSkullCrushers" name_key="drugSkullCrushers" description_key="drugSkullCrushersDesc" icon="ui_game_symbol_candy_skull_crushers">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugSkullCrushersDisplay"/><display_value_format value="time"/>
+		<!-- Rock hard candy that gives you a rock hard punch. Increases melee damage 50% for 2 minutes. -->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSkullCrushersDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSkullCrushersDisplay" operation="set" value="@$buffDrugSkullCrushersDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSkullCrushersDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSkullCrushers">
+				<requirement name="CVarCompare" cvar="$buffDrugSkullCrushersDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugSkullCrushersDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugSkullCrushersDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffDrugSugarButts" name_key="drugSugarButts" description_key="drugSugarButtsDesc" icon="ui_game_symbol_candy_sugar_butts">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffDrugSugarButtsDisplay"/><display_value_format value="time"/>
+		<!-- If ifs and butts were candy and nuts every day would be Christmas! Well now it can be with one tasty Sugar Butts Candy. Increases Better Barter one rank for 2 minutes. -->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSugarButtsDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSugarButtsDisplay" operation="set" value="@$buffDrugSugarButtsDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSugarButtsDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSugarButts">
+				<requirement name="CVarCompare" cvar="$buffDrugSugarButtsDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugSugarButtsDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugSugarButtsDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="BarteringBuying" operation="base_add" value="0.1"/>
+			<passive_effect name="BarteringSelling" operation="base_add" value="0.1"/>
+		</effect_group>
+	</buff>
+  </append>
+
+</configs>

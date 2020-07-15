@@ -1,0 +1,551 @@
+<configs>
+	<append xpath="/items">
+		<item name="starterPackBook">
+			<property name="Extends" value="blankNoteMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="starterPackBookDesc"/>
+			<property name="CustomIcon" value="questMaster"/>
+		</item>
+		<item name="BookOfExperience">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="BookOfExperiencedesc"/>
+			<property name="CustomIcon" value="questMaster"/>	
+			<property name="Stacknumber" value="50"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLuckyLooterBooks" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="350000"/>
+			</effect_group>
+		</item>		
+		
+		<item name="bookBundleFiremansAlmanac">
+			<property name="CustomIcon" value="bookFiremansAlmanacHeat"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="DescriptionKey" value="bookBundleGroupDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Stacknumber" value="5"/> <!-- STK ammobundle -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="10000"/>
+			<property name="Group" value="Books"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookFiremansAlmanacHeat,bookFiremansAlmanacAxes,bookFiremansAlmanacSpeed,bookFiremansAlmanacMolotov,bookFiremansAlmanacPrevention,bookFiremansAlmanacHarvest,bookFiremansAlmanacEquipment"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleNightStalker">
+			<property name="CustomIcon" value="bookNightStalkerStealthDamage"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookNightStalkerStealthDamage,bookNightStalkerSilentNight,bookNightStalkerBlades,bookNightStalkerThiefAdrenaline,bookNightStalkerArchery,bookNightStalkerTwilightThief,bookNightStalkerSlumberParty"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleLuckyLooter">
+			<property name="CustomIcon" value="bookLuckyLooterDukes"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookLuckyLooterDukes,bookLuckyLooterAmmunition,bookLuckyLooterBrass,bookLuckyLooterLead,bookLuckyLooterBooks,bookLuckyLooterFood,bookLuckyLooterMedical"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleEnforcer">
+			<property name="CustomIcon" value="bookEnforcerDamage"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookEnforcerDamage,bookEnforcerApparel,bookEnforcerPunks,bookEnforcerIntimidation,bookEnforcerAPAmmo,bookEnforcerHPAmmo,bookEnforcerCriminalPursuit"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleBatterUp">
+			<property name="CustomIcon" value="bookBatterUpBigHits"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookBatterUpBigHits,bookBatterUpConditioning,bookBatterUpGear,bookBatterUpSlowPitch,bookBatterUpKnockdown,bookBatterUpMaintenance,bookBatterUpBaseballBats"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleGreatHeist">
+			<property name="CustomIcon" value="bookTheGreatHeistSafes"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookGreatHeistSafes,bookGreatHeistGems,bookGreatHeistTimedCharge,bookGreatHeistClaimed,bookGreatHeistAdrenalineFall,bookGreatHeistSprintSneak,bookGreatHeistMotionDetection"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleWasteTreasures">
+			<property name="CustomIcon" value="bookWasteTreasuresHoney"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookWasteTreasuresHoney,bookWasteTreasuresCoffins,bookWasteTreasuresAcid,bookWasteTreasuresWater,bookWasteTreasuresDoors,bookWasteTreasuresCloth,bookWasteTreasuresSinks"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleNeedleAndThread">
+			<property name="CustomIcon" value="bookNeedleAndThreadWinterWear"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookNeedleAndThreadWinterWear,bookNeedleAndThreadLegwear,bookNeedleAndThreadFootwear,bookNeedleAndThreadDesertWear,bookNeedleAndThreadDusters,bookNeedleAndThreadPufferCoats,bookNeedleAndThreadPockets"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleHuntingJournal">
+			<property name="CustomIcon" value="bookHuntingJournalBears"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookHuntingJournalBears,bookHuntingJournalWolves,bookHuntingJournalCoyotes,bookHuntingJournalMountainLions,bookHuntingJournalDeer,bookHuntingJournalVultures,bookHuntingJournalSelfDefense"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleArtOfMining">
+			<property name="CustomIcon" value="bookArtOfMiningLuckyStrike"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookArtOfMiningLuckyStrike,bookArtOfMiningDiamondTools,bookArtOfMiningPallets,bookArtOfMiningCoffee,bookArtOfMiningBlackStrap,bookArtOfMiningAvalanche,bookArtOfMiningLantern"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleRangers">
+			<property name="CustomIcon" value="bookRangersArrowRecovery"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookRangersArrowRecovery,bookRangersExplodingBolts,bookRangersCripplingShot,bookRangersAPAmmo,bookRangersFlamingArrows,bookRangersForestGuide,bookRangersKnockdown"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundlePistolPete">
+			<property name="CustomIcon" value="bookPistolPeteTakeAim"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookPistolPeteTakeAim,bookPistolPeteSwissKnees,bookPistolPeteSteadyHand,bookPistolPeteMaintenance,bookPistolPeteHPAmmo,bookPistolPeteAPAmmo,bookPistolPeteDamage"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleShotgunMessiah">
+			<property name="CustomIcon" value="bookShotgunMessiahDamage"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookShotgunMessiahDamage,bookShotgunMessiahBreachingSlugs,bookShotgunMessiahLimbShot,bookShotgunMessiahSlugs,bookShotgunMessiahMaintenance,bookShotgunMessiahMagazine,bookShotgunMessiahPartyStarter"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleSniper">
+			<property name="CustomIcon" value="bookSniperDamage"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookSniperDamage,bookSniperCripplingShot,bookSniperHeadShot,bookSniperGhost,bookSniperControlledBreathing,bookSniperAPAmmo,bookSniperHPAmmo"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleAutoWeapons">
+			<property name="CustomIcon" value="bookAutoWeaponsDamage"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookAutoWeaponsDamage,bookAutoWeaponsUncontrolledBurst,bookAutoWeaponsMaintenance,bookAutoWeaponsDrumMag,bookAutoWeaponsRecoil,bookAutoWeaponsRagdoll,bookAutoWeaponsMachineGuns"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		<item name="bookBundleUrbanCombat">
+			<property name="CustomIcon" value="bookUrbanCombatLanding"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="Extends" value="bookBundleFiremansAlmanac"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="bookUrbanCombatLanding,bookUrbanCombatControlledBreathing,bookUrbanCombatSneaking,bookUrbanCombatJumping,bookUrbanCombatLandMines,bookUrbanCombatAdrenalineRush,bookUrbanCombatRoomClearing"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+		
+
+		<item name="startSuitcase">
+			<property name="CustomIcon" value="12mbag"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="DescriptionKey" value="startSuitcaseDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Stacknumber" value="5"/> <!-- STK ammobundle -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Group" value="Basics"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="drinkJarPureMineralWater,foodCanChili,meleeClubBaseballBat,medicalFirstAidBandage"/>
+				<property name="Create_item_count" value="2,3,1,5"/>
+			</property>
+		</item>
+
+
+<item name="HDMilitaryHelmet">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Tags" value="head,armor,armorHead,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="CustomIcon" value="HD Military Helmet"/><property name="CustomIconTint" value="139,0,139"/>
+	<property name="DescriptionKey" value="HDMASDesc"/>
+	<property name="CustomIconTint" value="0,128,128"/>
+	<property name="UMA.Overlay0Tint" value="0,128,128"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="9.6,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.01"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.100"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".001"/><display_value name="dNoiseMultiplier" value=".01"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".150,.160" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".05" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLight" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="Spotlight" localPos="0,0,0" localRot="90,0,0"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightCam" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="CameraNode" localPos="0,0,0" localRot="-90,0,0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLight"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightCam"/>
+		<triggered_effect trigger="onSelfItemActivate" action="SetPartActive" part="HeadLight" active="@!.IsFPV"/>
+		<triggered_effect trigger="onSelfItemActivate" action="SetPartActive" part="HeadLightCam" active="@.IsFPV"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLight" active="false"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightCam" active="false"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="gear_kevlar_helmet"/>
+		<property name="Overlay0" value="gear_kevlar_helmet"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+</item>
+
+<item name="HDMilitaryVest">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="CustomIcon" value="HD Military Vest"/>
+	<property name="CustomIconTint" value="0,128,128"/>
+	<property name="UMA.Overlay0Tint" value="0,128,128"/>
+	<property name="DescriptionKey" value="HDMASDesc"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffBandolier"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffBandolier"/>
+		<passive_effect name="ModSlots" operation="base_set" value="6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="9.6,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.01"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.100"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".001"/><display_value name="dNoiseMultiplier" value=".01"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".150,.160" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".05" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_vest"/>
+		<property name="Overlay0" value="armor_kevlar_vest"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="HDMilitaryGloves">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="CustomIcon" value="HD Military Gloves"/>
+	<property name="CustomIconTint" value="0,128,128"/>
+	<property name="UMA.Overlay0Tint" value="0,128,128"/>
+	<property name="DescriptionKey" value="HDMASDesc"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="9.6,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.01"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.100"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".001"/><display_value name="dNoiseMultiplier" value=".01"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".150,.160" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".05" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_gloves"/>
+		<property name="Overlay0" value="armor_kevlar_gloves"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="HDMilitaryLegs">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="CustomIcon" value="HD Military Legs"/>
+	<property name="CustomIconTint" value="139,0,139"/>
+	<property name="UMA.Overlay0Tint" value="139,0,139"/>
+	<property name="DescriptionKey" value="HDMASDesc"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="9.6,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.01"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.100"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".001"/><display_value name="dNoiseMultiplier" value=".01"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".150,.160" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".05" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="clothes_denim_pants"/>
+		<property name="Overlay0Tint" value="139,0,139"/>
+		<property name="Overlay0" value="pants_01"/>
+		<property name="Layer" value="0"/>
+		<property name="Mask0" value="legs" param1="inner"/>
+		<property name="UISlot" value="Pants"/>
+	</property>
+</item>
+
+<item name="HDMilitaryBoots">
+	<property name="Extends" value="armorMilitaryMaster" param1="CustomIcon"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="CustomIcon" value="HD Military Boots"/> 
+	<property name="CustomIconTint" value="139,0,139"/>
+	<property name="UMA.Overlay0Tint" value="139,0,139"/>
+	<property name="DescriptionKey" value="HDMASDesc"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="9.6,13"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.01"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0001" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.100"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".001"/><display_value name="dNoiseMultiplier" value=".01"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".150,.160" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".05" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
+
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_boots"/>
+		<property name="Overlay0" value="armor_kevlar_boots"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+<item name="Bandana">
+	<property name="Extends" value="apparelBandana"/>	
+	<property name="DisplayType" value="clothing"/>
+	<property name="CustomIcon" value="apparelBandana"/> 
+	<property name="CustomIconTint" value="139,0,139"/>
+	<property name="EquipSlot" value="Face"/>
+	<property name="UMA.Overlay0Tint" value="139,0,139"/>
+	<property class="UMA">
+		<property name="Mesh" value="gear_bandana"/>
+		<property name="Overlay0" value="gear_bandana"/>
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Face"/>
+		<property name="Mask0" value="Face" param1="base"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="6"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+	</effect_group>
+</item>
+
+<item name="LeatherDuster">
+	<property name="Extends" value="apparelCoatJacketGeneric"/>
+	<property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+	<property name="DisplayType" value="clothingJacketLetter"/>
+	<property name="CustomIcon" value="apparelCoatLeatherDuster"/> 
+	<property name="CustomIconTint" value="139,0,139"/>
+	<property name="UMA.Overlay0Tint" value="139,0,139"/>
+	<property class="UMA">
+		<property name="Mesh" value="clothes_leather_duster"/>
+		<property name="Overlay0" value="clothes_leather_duster"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="Jacket"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/><display_value name="dRunSpeed" value=".1"/>
+		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
+			<requirement name="ProgressionLevel" progression_name="perkBatterUpGear" operation="Equals" value="1"/>
+		</passive_effect>
+	</effect_group>
+</item>
+
+<item name="armorPants">
+	<property name="Extends" value="armorClothMaster" param1="CustomIcon"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,padded,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+		<property name="CustomIcon" value="armorSteelLegs"/> 
+		<property name="CustomIconTint" value="0,128,128"/>
+	<property name="UMA.Overlay0Tint" value="0,128,128"/>
+	<effect_group>
+		<passive_effect name="ModSlots" operation="base_set" value="6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.8"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="150,300" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<display_value name="dStaminaChangeOT" value="0"/>
+		<passive_effect name="BuffResistance" operation="base_add" value=".103" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".01" tags="buffInjuryBleeding"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_cloth_legs"/>
+		<property name="Overlay0" value="armor_cloth_legs"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+
+<item name="TShirtPlain">
+	<property name="Extends" value="apparelTShirtPlain" param1="CustomIcon"/>
+	<property name="Tags" value="upperbody,chest,clothing,pocketMod,canHaveCosmetic"/>
+	<property name="DisplayType" value="clothing"/>
+	<property name="EquipSlot" value="Chest"/>
+		<property name="CustomIcon" value="apparelTShirtPlain"/> 
+		<property name="CustomIconTint" value="0,128,128"/>
+	<property name="UMA.Overlay0Tint" value="0,128,128"/>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="base_chest"/>
+		<property name="Overlay0" value="torso"/>
+		<property name="Overlay0Tint" value="skin"/>
+		<property name="Overlay1" value="tshirt"/>
+		<property name="Overlay1Tint" value="255,255,255"/>
+		<property name="Layer" value="0"/>
+		<property name="Mask0" value="chest" param1="inner"/>
+		<property name="UISlot" value="Shirt"/>
+	</property>
+</item>
+
+		<item name="christmasPack">
+			<property name="CustomIcon" value="12mbag"/><property name="ItemTypeIcon" value="bundle"/><property name="CustomIconTint" value="ffb0b0"/>
+			<property name="DescriptionKey" value="christmasPackDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Group" value="Basics"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="BookOfExperience,HDMilitaryHelmet,HDMilitaryBoots,HDMilitaryLegs,HDMilitaryGloves,HDMilitaryVest,apparelNightvisionGoggles,gunPistolAdmin,meleeToolWrenchAdmin,meleeToolPaintToolAdmin,gunToolDiggerAdmin,ringOfFireAdmin,LeatherDuster,Bandana,armorPants,TShirtPlain"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+
+
+<item name="+New">
+			<property name="CustomIcon" value="12mbag"/><property name="ItemTypeIcon" value="bundle"/>
+			<property name="CustomIconTint" value="ffb0b0"/>
+			<property name="DescriptionKey" value="christmasPackDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Group" value="Basics"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value=""/>
+				<property name="Create_item_count" value=""/>
+				<property name="Create_item" value="modGunScope30,modSmartvision,modAI,+gunPistolGyancher,+gunRifleGyancher,+SwordGun,SmartBracelet,modSmartBraceletModule3,Tablet,+GPS,CCTVScreen,CamPanSm0,spawnDog,manux_vehicleQuadPlaceable,modArmorRunningShoes,BrightGoggles,drinkMugWienerMelange"/>
+				<property name="Create_item_count" value="1,1,4,1,1,1,1,1,1,1,1,1,1,1,1,1"/>
+			</property>
+		</item>
+
+
+
+	</append>
+</configs>

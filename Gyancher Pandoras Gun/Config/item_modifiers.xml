@@ -1,0 +1,79 @@
+<configs>
+	<append xpath="/item_modifiers" >
+	<item_modifier name="modSmartBraceletModule1" installable_tags="clothing" modifier_tags="rare" type="attachment">
+		<property name="CustomIcon" value="mod1"/> 
+		<property name="Material" value="Msteel"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="99"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffAcceleratedHealingLvlUp"/>
+		</effect_group>		
+	</item_modifier>
+
+<item_modifier name="modSmartBraceletModule2" installable_tags="pocketMod" modifier_tags="rare" type="attachment">
+		<property name="CustomIcon" value="mod2"/> 
+			<property name="Material" value="Msteel"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="99"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPlayerRegen"/>
+		</effect_group>		
+	</item_modifier>
+
+<item_modifier name="modSmartBraceletModule3" installable_tags="armor" modifier_tags="rare" type="attachment">
+		<property name="CustomIcon" value="mod3"/> 
+			<property name="Material" value="Msteel"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$staminaAmountAdd" operation="add" value="99"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPhysicalConditioningLvlUp"/>
+	</effect_group>		
+	</item_modifier>
+	
+	 <item_modifier name="modThorns" installable_tags="armorChest,armorLegs" modifier_tags="damage" type="attachment">
+      <property name="CustomIcon" value="modThorns"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="Group" value="Mods"/>
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+      <effect_group tiered="false">
+        <requirement name="EntityTagCompare" target="other" tags="zombie"/>
+        <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="33"/>
+        <triggered_effect trigger="onOtherAttackedSelf" target="other" action="AddBuff" buff="buffInjuryBleedingZombie" />
+      </effect_group>
+    </item_modifier>
+
+    <item_modifier name="modShockArmor" installable_tags="armorChest" modifier_tags="damage" type="attachment">
+      <property name="CustomIcon" value="modShockArmor"/>
+      <property name="UnlockedBy" value="modShockArmorSchematic"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="Group" value="Mods"/>
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+      <effect_group tiered="false">
+        <requirement name="EntityTagCompare" target="other" tags="zombie"/>
+        <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="33"/>
+        <triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" target="other" buff="buffShocked" />
+      </effect_group>
+    </item_modifier>
+
+  
+
+    <item_modifier name="modShockArrows" installable_tags="perkArchery" modifier_tags="damage" type="attachment">
+      <property name="CustomIcon" value="modShockArrow"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="Group" value="Mods"/>
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+      <effect_group tiered="false">
+        <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="33"/>
+        <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked" />
+      </effect_group>
+
+    </item_modifier>
+
+		
+</append>
+</configs>
