@@ -1,5 +1,0 @@
-Key,Source,Context,Changes,English
-
-manux_vehicleMonsterBeetle,vehicles,vehicle,EnChanged,Manux's Monster Beetle,,,,,
-manux_vehicleMonsterBeetlePlaceable,vehicles,vehicle,EnChanged,Manux's Monster Beetle,,,,,
-manux_vehicleMonsterBeetleDesc,vehicles,vehicle,EnChanged,"Big, Fast, Strong, and Deadly. It even hops. A King's Ride!",,,,,
