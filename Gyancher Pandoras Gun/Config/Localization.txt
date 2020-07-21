@@ -1,0 +1,3 @@
+Key,Source,Context,Changes,English
+gunPistolGyancher,items,Gyancher,,,Dev: Instant Death Pistol
+gunPistolAdminGyancher,items,Gyancher,,,When you absolutely positively got to kill every zombie in the room.

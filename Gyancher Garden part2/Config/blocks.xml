@@ -1,0 +1,83 @@
+<configs>
+	<append xpath="/blocks">
+
+<block name="Angel Statue">
+	<property name="Material" value="Mconcrete" />
+	<property name="CustomIcon" value="AngelStatue" />
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/angel.unity3d?Angel.prefab"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="FuelValue" value="100" />
+	<property name="MultiBlockDim" value="2,3,2" />
+	<property name="ModelOffset" value="0,-3,0" />
+	<property name="LightOpacity" value="0"/>
+	<property name="IsDeveloper" value="true" />
+	<property name="CanPickup" value="false" />
+	<property name="DescriptionKey" value="StatueDesc"/>
+	<property name="EconomicValue" value="10000"/>
+</block>
+		
+<block name="ButterflyPurple">
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/>
+		<property name="CustomIcon" value="ButterflyPurple" />
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/ButterflyPurple.unity3d?ButterflyPurple.prefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="24"/>
+
+	<property name="EconomicValue" value="40"/> <!-- disassemble value -->
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+</block>
+
+		
+		<block name="Morel">
+			<property name="CustomIcon" value="Morel" />
+			<property name="Material" value="Mmushrooms" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Mesh" value="models" />
+			<property name="Model" value="#@modfolder:Resources/Morel.unity3d?Morel" /> 
+			<!-- <property name="HandleFace" value="Bottom"/> -->
+			<property name="ModelOffset" value="0,.5,0" />
+			<property name="Collide" value="melee,bullet,arrow,rocket" />
+			<property name="CanPickup" value="true" param1="Morel" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="HarvestOverdamage" value="false" />
+			<drop event="Destroy" name="Morel" count="1" />
+		</block>
+		
+		<block name="Tractor">
+			<property name="CustomIcon" value="Tractor" />
+			<property name="Material" value="Mmushrooms" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Mesh" value="models" />
+			<property name="Model" value="#@modfolder:Resources/Tractor.unity3d?Tractor" /> 
+			<!-- <property name="HandleFace" value="Bottom"/> -->
+			<property name="ModelOffset" value="0,.5,0" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="CanPickup" value="true" param1="Tractor" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="HarvestOverdamage" value="false" />
+			<drop event="Destroy" name="Tractor" count="1" />
+		</block>
+	
+<block name="scarecrow">
+	<property name="Material" value="Mconcrete" />
+	<property name="CustomIcon" value="scarecrow" />
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/scarecrow.unity3d?scarecrow.prefab"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="FuelValue" value="100" />
+	<property name="MultiBlockDim" value="1,3,1" />
+	<property name="ModelOffset" value="0,-.5,0" />
+	<property name="LightOpacity" value="0"/>
+	<property name="IsDeveloper" value="true" />
+	<property name="CanPickup" value="false" />
+	<property name="DescriptionKey" value="StatueDesc"/>
+	<property name="EconomicValue" value="10000"/>
+</block>
+</append>
+</configs>

@@ -1,0 +1,83 @@
+<configs>
+<append xpath="/entity_classes">
+
+<entity_class name="animalFriendlyDog" extends="animalTemplateTimid">
+	<property name="Tags" value="entity,animal,dog,perkAT04,perkAT05,turret,deployed"/>	
+	<property name="Parent" value="Animals"/>
+	
+	<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+	<!--property name="Prefab" value="Wolf"-->
+	<property name="AvatarController" value="AvatarAnimalController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="PhysicsBody" value="wolf"/>
+	<property name="Mass" value="95"/>
+	
+	<property name="Prefab" value="/Entities/Animals/Wolf/animalStandardWolfRagdoll"/>
+	<property name="ReplaceMaterial0" value="#@modfolder:Resources/doggos.unity3d?gsDog"/>
+	<property name="ReplaceMaterial1" value="#@modfolder:Resources/doggos.unity3d?gsDog_Eye"/>
+	<property name="Mesh" value=""/>
+	
+	<property name="WanderSpeed" value="0.5" />
+	<property name="ApproachSpeed" value="1.6" />
+	<property name="NightWanderSpeed" value="0.3" />
+	<property name="NightApproachSpeed" value="1.6" />
+	<property name="PanicSpeed" value="1.6" />
+	
+	<property name="CanClimbLadders" value="false" />
+	<property name="RotateToGround" value="true" />
+	<property name="MaxHealth" value="100" />
+	<property name="Immunity" value="disease" />
+	<property name="HasDeathAnim" value="true"/>
+	<property name="RootMotion" value="true"/>
+	<property name="RagdollOnDeathChance" value=".5"/>
+	<property name="IsEnemyEntity" value="false"/>
+	
+	<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer, 5000"/>
+	<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+	<property name="AITask-3" value="Look"/>
+	<property name="AITask-4" value="BreakBlock"/>
+	<property name="AITask-5" value="Territorial"/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+	<property name="AITarget-2" value="BlockingTargetTask"/>
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,0,0,EntityZombie,0,0"/>
+
+	<property name="SoundRandom" value="wolfroam"/>
+	<property name="SoundAlert" value="wolfalert"/>
+	<property name="SoundHurt" value="wolfpain"/>
+	<property name="SoundDeath" value="wolfdeath"/>
+	<property name="SoundAttack" value="wolfattack"/>
+	<property name="SoundSense" value="wolfsense"/>
+	<property name="SoundGiveUp" value="wolfgiveup"/>
+
+	<!-- Stealth -->
+	<property name="SmellAlertThreshold" value="5"/>
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="meleeHandAnimalWolf"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="140"/>
+		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+		
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2.1"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/> <!-- animalWolf -->
+	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+	<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+	<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+</entity_class>
+
+
+
+
+</append>
+</configs>
